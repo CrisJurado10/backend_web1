@@ -10,8 +10,7 @@ Este repositorio contiene el backend de una aplicación web para gestionar usuar
 - [Requisitos previos](#requisitos-previos)
 - [Instalación](#instalación)
 - [Estructura del proyecto](#estructura-del-proyecto)
-- [Despliegue en Railway](#despliegue-en-railway)
-- [Despliegue en Render](#despliegue-en-render)
+- [Despliegue en Railway y Render](#despliegue-en-railway)
 - [Licencia](#licencia)
 
 ## Descripción
@@ -54,7 +53,6 @@ Werkzeug==3.0.4
 
 
 ## Instalación
-
 1. Clona este repositorio:
    ```bash
    git clone https://github.com/CrisJurado10/backend_web1.git
