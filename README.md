@@ -5,6 +5,7 @@ Este repositorio contiene el backend de una aplicación web para gestionar usuar
 
 ## Índice
 - [Descripción](#descripción)
+- [Deploy](#despliegue-en-producción)
 - [Características](#características)
 - [Requisitos previos](#requisitos-previos)
 - [Instalación](#instalación)
