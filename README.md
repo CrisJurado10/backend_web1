@@ -10,7 +10,7 @@ Este repositorio contiene el backend de una aplicación web para gestionar usuar
 - [Requisitos previos](#requisitos-previos)
 - [Instalación](#instalación)
 - [Estructura del proyecto](#estructura-del-proyecto)
-- [Despliegue en Railway y Render](#despliegue-en-railway)
+- [Despliegue en Railway](#despliegue-en-railway)
 - [Licencia](#licencia)
 
 ## Descripción
