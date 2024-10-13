@@ -1,7 +1,7 @@
 # Gestor_Usuarios_APP_FLASK_MVC
 # backend_web1
 
-Este repositorio contiene el backend de una aplicación web para gestionar usuarios,de manera segura teniendo una base de datos con contraseñas tipo hash asegurando la seguridad e integridad del sistema, desarrollada con Flask siguiendo el patrón MVC.
+Este repositorio contiene el backend de una aplicación web para gestionar usuarios de manera segura, utilizando contraseñas con hash para asegurar la integridad del sistema. Está desarrollada con Flask siguiendo el patrón MVC.
 
 ## Índice
 - [Descripción](#descripción)
@@ -9,15 +9,16 @@ Este repositorio contiene el backend de una aplicación web para gestionar usuar
 - [Características](#características)
 - [Requisitos previos](#requisitos-previos)
 - [Instalación](#instalación)
-- [Estructura del proyecto](#estructura-del-proyecto)
+- [Estructura del proyecto MVC](#estructura-del-proyecto-mvc)
 - [Despliegue en Railway](#despliegue-en-railway)
+- [Despliegue en Render](#despliegue-en-render)
 - [Licencia](#licencia)
 
 ## Descripción
 
-Aplicación web para gestionar usuarios, implementada con Flask y MySQL, diseñada siguiendo el patrón MVC. Ofrece funciones CRUD para la administración de usuarios, y está lista para despliegue en Render.
+Aplicación web para gestionar usuarios, implementada con Flask y MySQL, diseñada siguiendo el patrón MVC. Ofrece funciones CRUD para la administración de usuarios, asegurando las contraseñas con hash.
 
-### Despliegue en producción
+## Despliegue en producción
 
 Accede a la aplicación en: [https://backend-web1.onrender.com](https://backend-web1.onrender.com)
 
@@ -25,57 +26,39 @@ Accede a la aplicación en: [https://backend-web1.onrender.com](https://backend-
 
 - Gestión de usuarios (crear, leer, actualizar, eliminar).
 - API RESTful.
-- Autenticación básica.
-- Configurado para despliegue en Render.
+- Contraseñas almacenadas con hash.
+- Despliegue en Render.
 
 ## Requisitos previos
-
 - Python 3.x
 - MySQL
 - Pip
-
-Dependencias listadas en `requirements.txt`:
-
-```plaintext
-blinker==1.8.2
-click==8.1.7
-colorama==0.4.6
-Flask==3.0.3
-Flask-MySQLdb==2.0.0
-gunicorn==23.0.0
-itsdangerous==2.2.0
-Jinja2==3.1.4
-MarkupSafe==3.0.1
-mysql-connector-python==9.0.0
-mysqlclient==2.2.4
-packaging==24.1
-Werkzeug==3.0.4
-
+#Los demás requerimientos están en: `requirements.txt`.
 
 ## Instalación
-1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/CrisJurado10/backend_web1.git
-   cd backend_web1
+Clona este repositorio:
 
-2. Crea y activa un entorno virtual:
+bash
+Copiar código
+git clone https://github.com/CrisJurado10/backend_web1.git
+cd backend_web1
+Crea y activa un entorno virtual:
 
 bash
 Copiar código
 python -m venv venv
 source venv/bin/activate  # En Windows: venv\Scripts\activate
+Instala las dependencias:
 
-3. Instala las dependencias:
 bash
 Copiar código
 pip install -r requirements.txt
 
-4. Creación de la BDD en MySQL:
-CREATE database railway
-USE railway; 
-
-
-SELECT * FROM railway.usuarios;
+Creación de la base de datos en MySQL:
+sql
+Copiar código
+CREATE DATABASE railway;
+USE railway;
 
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -84,32 +67,31 @@ CREATE TABLE usuarios (
     contraseña VARCHAR(100) NOT NULL
 );
 
-
-5. Configura las variables de entorno para la base de datos en .env:
+Configura las variables de entorno para la base de datos en .env: (Para el uso de manera local)
 env
 Copiar código
 MYSQL_USER=<tu_usuario>
 MYSQL_PASSWORD=<tu_contraseña>
-MYSQL_DB=<nombre_base_datos>
-
+MYSQL_DB=<railway>
 
 Ejecuta la aplicación:
 terminal
 Copiar código
 flask run
 
-## Estructura del proyecto MVC
+Estructura del proyecto MVC
 controllers/: Lógica de negocio y gestión de rutas.
 models/: Definición de modelos de la base de datos.
 static/: Archivos estáticos como CSS o imágenes.
 templates/: Archivos HTML.
 
+## Despliegue en Railway
+La aplicación recupera datos de una base de datos MySQL alojada en un servidor de Railway.
+
 ## Despliegue en Render
 Este proyecto está configurado para ejecutarse en Render con un archivo Procfile que define el comando de inicio para la aplicación.
 
-## Despliegue en Railway
-La página web recupera data de una base de datos MySQL alojada en un servidor de Railway.
-
 ## Licencia
 Este proyecto está bajo la Licencia MIT.
+
 
